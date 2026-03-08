@@ -44,7 +44,7 @@ export default function Contact() {
             open to new opportunities and interesting conversations.
           </p>
           <p className="text-body-md text-apple-gray-400 mb-12">
-            +1 (812) 778-5427
+            +1 999 999-8989
           </p>
 
           {/* CTA buttons */}

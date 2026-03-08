@@ -3,6 +3,7 @@
 import dynamic from "next/dynamic";
 import TextReveal from "./TextReveal";
 import { motion } from "framer-motion";
+import MetalLogo from "./MetalLogo";
 
 const ParticleField = dynamic(() => import("./ParticleField"), {
   ssr: false,
@@ -31,17 +32,24 @@ export default function Hero() {
             Software Engineer
           </span>
         </motion.div>
-
-        <TextReveal
-          text="Durgesh Tiwari"
-          className="text-display-xl font-bold"
-          delay={0.4}
-        />
-        <TextReveal
-          text="Software Engineer"
-          className="text-display-xl font-bold text-gradient-swift"
-          delay={0.7}
-        />
+        <div className="flex flex-col items-center">
+          <div className="flex items-center">
+            <TextReveal
+              text="Durgesh Tiwari"
+              className="text-display-lg font-bold md:text-display-xl"
+              delay={0.4}
+            />
+            <MetalLogo />
+          </div>
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.7 }}
+            className="text-display-lg font-bold text-gradient-swift md:text-display-xl"
+          >
+            Software Engineer
+          </motion.h1>
+        </div>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}

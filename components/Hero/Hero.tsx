@@ -5,7 +5,7 @@ import TextReveal from "./TextReveal";
 import { motion } from "framer-motion";
 import MetalLogo from "./MetalLogo";
 
-const ParticleField = dynamic(() => import("./ParticleField"), {
+const LiquidGlass = dynamic(() => import("./LiquidGlass"), {
   ssr: false,
   loading: () => <div className="absolute inset-0 bg-black" />,
 });
@@ -16,7 +16,7 @@ export default function Hero() {
       id="hero"
       className="relative flex min-h-screen items-center justify-center overflow-hidden"
     >
-      <ParticleField />
+      <LiquidGlass />
 
       {/* Gradient overlay */}
       <div className="absolute inset-0 z-[1] bg-gradient-to-b from-transparent via-black/20 to-black" />

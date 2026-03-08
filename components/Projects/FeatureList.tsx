@@ -41,7 +41,7 @@ export default function FeatureList({ features, triggerId }: FeatureListProps) {
       {features.map((feature, i) => (
         <div
           key={feature.title}
-          className={`feature-item-${triggerId} flex items-start gap-4 rounded-xl border border-white/[0.06] bg-white/[0.02] p-4 transition-all duration-300 hover:border-white/[0.12] hover:bg-white/[0.04]`}
+          className={`feature-item-${triggerId} flex items-start gap-4 rounded-xl glass-strong p-4 transition-all duration-300 hover:border-white/[0.12] hover:bg-white/[0.04]`}
         >
           <span className="text-body-sm font-mono text-apple-gray-400 mt-0.5 shrink-0">{feature.icon}</span>
           <div>

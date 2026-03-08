@@ -112,7 +112,7 @@ export default function GitHubStats() {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.6 }}
-              className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-3 overflow-hidden"
+              className="rounded-2xl glass-strong p-3 overflow-hidden"
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
@@ -126,7 +126,7 @@ export default function GitHubStats() {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-3 overflow-hidden"
+              className="rounded-2xl glass-strong p-3 overflow-hidden"
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img

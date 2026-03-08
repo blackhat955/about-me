@@ -112,7 +112,7 @@ export default function Timeline() {
             Experience
           </span>
           <h2 className="text-display-lg mb-6">
-            My <span className="text-gradient">Journey</span>
+            My <span className="text-gradient-journey">Journey</span>
           </h2>
           <p className="text-body-lg text-apple-gray-300 max-w-2xl">
             From Mumbai to Bloomington to Chicago — building systems
@@ -150,7 +150,7 @@ export default function Timeline() {
                   i % 2 === 0 ? "md:pr-8" : "md:pl-8"
                 }`}
               >
-                <div className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-6 transition-all duration-500 hover:border-white/[0.12] hover:bg-white/[0.04]">
+                <div className="rounded-2xl glass-strong p-6">
                   <span className="text-caption text-apple-gray-400 mb-2 block">
                     {milestone.year}
                   </span>

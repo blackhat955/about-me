@@ -101,30 +101,53 @@ export default function ProjectShowcase() {
   const containerRef = useGSAP(
     (gsap) => {
       projects.forEach((project) => {
-        gsap.fromTo(
-          `.${project.id}-content`,
-          { y: 80, opacity: 0 },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 1,
-            ease: "power3.out",
-            scrollTrigger: {
-              trigger: `#${project.id}`,
-              start: "top 70%",
-              toggleActions: "play none none reverse",
-            },
-          }
-        );
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: `#${project.id}`,
+            start: "top 70%",
+            toggleActions: "play none none reverse",
+          },
+        });
+
+        tl.fromTo(
+          `.${project.id}-content .project-subtitle`,
+          { y: 60, opacity: 0 },
+          { y: 0, opacity: 1, duration: 1, ease: "power3.out" }
+        )
+          .fromTo(
+            `.${project.id}-content .project-title`,
+            { y: 50, opacity: 0 },
+            { y: 0, opacity: 1, duration: 1, ease: "power3.out" },
+            "-=0.8"
+          )
+          .fromTo(
+            `.${project.id}-content .project-description`,
+            { y: 40, opacity: 0 },
+            { y: 0, opacity: 1, duration: 1, ease: "power3.out" },
+            "-=0.8"
+          )
+          .fromTo(
+            `.${project.id}-content .project-tech`,
+            { y: 30, opacity: 0 },
+            { y: 0, opacity: 1, duration: 1, ease: "power3.out" },
+            "-=0.8"
+          )
+          .fromTo(
+            `.${project.id}-content .project-features`,
+            { y: 20, opacity: 0 },
+            { y: 0, opacity: 1, duration: 1, ease: "power3.out" },
+            "-=0.8"
+          );
 
         gsap.fromTo(
           `.${project.id}-device`,
-          { y: 60, opacity: 0, scale: 0.95 },
+          { y: 80, opacity: 0, scale: 0.9, rotation: -5 },
           {
             y: 0,
             opacity: 1,
             scale: 1,
-            duration: 1.2,
+            rotation: 0,
+            duration: 1.5,
             ease: "power3.out",
             scrollTrigger: {
               trigger: `#${project.id}`,
@@ -147,12 +170,11 @@ export default function ProjectShowcase() {
           </span>
         </div>
         <h2 className="text-display-lg mb-6">
-          Selected <span className="text-gradient-swift">Work</span>
-        </h2>
-        <p className="text-body-lg text-apple-gray-300 max-w-2xl mb-20">
-          From GPU rendering pipelines to high-performance search engines —
-          systems built for speed, stability, and scale.
-        </p>
+            Digital <span className="text-gradient-swift">Craftsmanship</span>
+          </h2>
+          <p className="text-body-lg text-apple-gray-300 max-w-2xl mb-20">
+            A curated collection of projects that demonstrate my passion for building elegant, high-performance software.
+          </p>
 
         <div className="space-y-40">
           {projects.map((project, index) => (

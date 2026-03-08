@@ -118,10 +118,10 @@ export default function SkillsMarquee() {
           ].map((cat) => (
             <div
               key={cat.title}
-              className={`rounded-2xl border border-white/[0.06] bg-gradient-to-b ${cat.gradient} p-6 transition-all duration-500 hover:border-white/[0.12]`}
+              className={`rounded-2xl glass-strong bg-gradient-to-b ${cat.gradient} p-6`}
             >
               <h3 className="text-body-lg font-semibold mb-3">{cat.title}</h3>
-              <p className="text-body-sm text-apple-gray-400">
+              <p className="text-body-sm text-apple-gray-300">
                 {cat.description}
               </p>
             </div>

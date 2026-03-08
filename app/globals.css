@@ -91,9 +91,9 @@
     background-image: linear-gradient(to right, #F05138, #FF8A65);
   }
 
-  .text-gradient-purple {
+  .text-gradient-journey {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(to right, #8DA4BF, #6B7B8D);
+    background-image: linear-gradient(to right, #F05138, #8DA4BF);
   }
 
   .glass {

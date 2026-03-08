@@ -170,7 +170,7 @@ export default function GitHubStats() {
               href={`https://github.com/blackhat955/${repo.name}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="repo-card group rounded-2xl border border-white/[0.06] bg-white/[0.02] p-6 transition-all duration-500 hover:border-white/[0.12] hover:bg-white/[0.04] card-hover block"
+              className="repo-card group rounded-2xl glass-strong p-6 transition-all duration-300 hover:-translate-y-1 hover:border-white/20 hover:shadow-2xl hover:shadow-black/40 block"
             >
               <div className="flex items-center gap-2 mb-3">
                 <svg
@@ -180,11 +180,11 @@ export default function GitHubStats() {
                 >
                   <path d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9z" />
                 </svg>
-                <span className="text-body-sm font-semibold text-apple-swift group-hover:underline">
+                <span className="text-body-sm font-semibold text-apple-swift">
                   {repo.name}
                 </span>
               </div>
-              <p className="text-body-sm text-apple-gray-300 mb-4 line-clamp-2">
+              <p className="text-body-sm text-apple-gray-300 mb-4 line-clamp-3">
                 {repo.description}
               </p>
               <div className="flex items-center gap-4 text-caption text-apple-gray-400">

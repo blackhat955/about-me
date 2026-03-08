@@ -3,12 +3,14 @@
 interface DeviceMockupProps {
   type: "desktop" | "mobile" | "tablet";
   gradient: string;
+  image?: string;
   children?: React.ReactNode;
 }
 
 export default function DeviceMockup({
   type,
   gradient,
+  image,
   children,
 }: DeviceMockupProps) {
   if (type === "mobile") {
@@ -72,28 +74,31 @@ export default function DeviceMockup({
           <div className="h-2.5 w-2.5 rounded-full bg-[#febc2e]" />
           <div className="h-2.5 w-2.5 rounded-full bg-[#28c840]" />
         </div>
-        <div
-          className={`relative aspect-video w-full overflow-hidden rounded-t-lg bg-gradient-to-br ${gradient}`}
-        >
-          {children || (
-            <div className="flex h-full items-center justify-center p-10">
-              <div className="w-full space-y-4">
-                <div className="flex gap-4">
-                  <div className="h-4 w-16 rounded-full bg-white/20" />
-                  <div className="h-4 w-20 rounded-full bg-white/15" />
-                  <div className="h-4 w-12 rounded-full bg-white/10" />
-                </div>
-                <div className="h-5 w-2/3 rounded-full bg-white/20 mt-6" />
-                <div className="h-5 w-1/2 rounded-full bg-white/15" />
-                <div className="mt-6 grid grid-cols-3 gap-4">
-                  <div className="h-24 rounded-xl bg-white/10" />
-                  <div className="h-24 rounded-xl bg-white/10" />
-                  <div className="h-24 rounded-xl bg-white/10" />
+          <div
+            className={`relative aspect-video w-full overflow-hidden rounded-t-lg bg-gradient-to-br ${gradient}`}
+          >
+            {image ? (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img src={image} alt="" className="w-full h-full object-cover" />
+            ) : children || (
+              <div className="flex h-full items-center justify-center p-10">
+                <div className="w-full space-y-4">
+                  <div className="flex gap-4">
+                    <div className="h-4 w-16 rounded-full bg-white/20" />
+                    <div className="h-4 w-20 rounded-full bg-white/15" />
+                    <div className="h-4 w-12 rounded-full bg-white/10" />
+                  </div>
+                  <div className="h-5 w-2/3 rounded-full bg-white/20 mt-6" />
+                  <div className="h-5 w-1/2 rounded-full bg-white/15" />
+                  <div className="mt-6 grid grid-cols-3 gap-4">
+                    <div className="h-24 rounded-xl bg-white/10" />
+                    <div className="h-24 rounded-xl bg-white/10" />
+                    <div className="h-24 rounded-xl bg-white/10" />
+                  </div>
                 </div>
               </div>
-            </div>
-          )}
-        </div>
+            )}
+          </div>
       </div>
       {/* Stand */}
       <div className="mx-auto h-4 w-full rounded-b-lg bg-apple-gray-600 shadow-lg" />

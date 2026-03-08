@@ -15,6 +15,7 @@ const projects = [
     gradient: "from-[#2a1510] via-[#1f1815] to-[#1a1210]",
     accentColor: "text-apple-swift",
     device: "desktop" as const,
+    image: "/projects/oasis-browser.png",
     features: [
       { icon: "//", title: "90 FPS Rendering", description: "GPU-centric pipeline with Metal command buffers and tile-based rendering" },
       { icon: "//", title: "Multi-Threaded Architecture", description: "Lock-free input, asset, inference, and render threads with snapshot model" },
@@ -28,7 +29,8 @@ const projects = [
     title: "High-Performance Search Engine",
     subtitle: "Software Engineer — Programmers Army",
     description:
-      "Built a C++ middleware search engine using Trie and HashMap-based architecture with fuzzy matching (typo tolerance up to 4 characters). Reduced search time by 40% and memory usage by 30% under heavy traffic.",
+      "I wanted to create something that wasn't just fast, but also smart enough to handle typos. So, I implemented a Trie data structure combined with the Levenshtein Distance algorithm (for fuzzy matching) in C++. To make it usable on the web, I wrapped the C++ core in a Node.js addon using node-addon-api. It's designed to be a raw, developer-focused tool—no fancy marketing fluff, just performance metrics and results.",
+    image: "/projects/search-engine.png",
     tech: ["C++", "STL", "Multithreading", "Node.js", "GDB", "Valgrind"],
     gradient: "from-[#161b22] via-[#1a2028] to-[#0f1318]",
     accentColor: "text-apple-metal",
